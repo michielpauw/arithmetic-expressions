@@ -77,12 +77,10 @@ def main():
     for c in comb:
         finder = StreakFinder(c)
         streak = finder.get_streak()
-        if streak > longest_streak:
-            print(c)
-            print(streak)
-            print()
+        if streak >= longest_streak:
+            longest_streak_comb = c
             longest_streak = streak
-
+    print(longest_streak_comb)
 
 if __name__ == "__main__":
     main()
